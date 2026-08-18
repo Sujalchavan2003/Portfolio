@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujal Chavan Portfolio - Data Scientist & Data Analyst</title>
+
+    <meta name="description" content="Sujal Chavan - Data Scientist and Data Analyst specializing in Power BI, SQL, Python, and Machine Learning. Turning messy, unstructured data into clear, actionable insights.">
+    <meta name="keywords" content="Data Analyst, Data Scientist, Power BI, SQL, Python, Machine Learning, EDA, Data Visualization, Pune">
+    <meta name="author" content="Sujal Chavan">
+
+    <meta property="og:title" content="Sujal Chavan - Data Scientist & Data Analyst">
+    <meta property="og:description" content="Data Scientist and Data Analyst specializing in Power BI, SQL, Python, and Machine Learning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sujalchavan2003.github.io/">
+    <meta property="og:site_name" content="Sujal Chavan Portfolio">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sujal Chavan - Data Scientist & Data Analyst">
+    <meta name="twitter:description" content="Data Scientist and Data Analyst specializing in Power BI, SQL, Python, and Machine Learning.">
+
+    <link rel="canonical" href="https://sujalchavan2003.github.io/">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="landing-body">
+
+    <div class="landing">
+
+        <!-- Top: logo only -->
+        <div class="landing-top">
+            <span class="logo">SC</span>
+        </div>
+
+        <!-- Center: hero content -->
+        <main class="landing-main">
+            <div class="landing-content">
+                <h1 class="landing-title">Sujal Chavan</h1>
+                <p class="landing-subtitle">Data Scientist &amp; Data Analyst</p>
+                <p class="landing-desc">
+                    I turn messy, unstructured data into clear, decision-ready insights. Comfortable across Power BI, SQL, Python, and ML - from cleaning 2.8M+ record datasets to building the dashboards that make sense of them.
+                </p>
+                <div class="landing-actions">
+                    <a href="all-projects.html" class="cta-button">View My Work</a>
+                    <span class="actions-divider" aria-hidden="true"></span>
+                    <a href="about.html" class="landing-link">About</a>
+                    <a href="https://github.com/Sujalchavan2003" target="_blank" rel="noopener noreferrer" class="landing-link landing-link--ext">GitHub&nbsp;↗</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom: copyright -->
+        <footer class="landing-footer">
+            <p>&copy; <span id="copyright-year"></span> Sujal Chavan. Built with passion for data &amp; insight.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Typing effect on hero title
+        function typeWriter(element, text, speed = 55) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML = text.slice(0, i + 1) + '<span style="border-right:2px solid #00d4ff;margin-left:1px;animation:blink 0.7s step-end infinite;"></span>';
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    setTimeout(() => { element.innerHTML = text; }, 800);
+                }
+            }
+            type();
+        }
+
+        window.addEventListener('load', () => {
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            setTimeout(() => typeWriter(document.querySelector('.landing-title'), 'Sujal Chavan', 55), 300);
+        });
+
+        // Logo glitch
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('mouseenter', () => { logo.style.animation = 'glitch 0.3s ease-in-out'; });
+        logo.addEventListener('animationend', () => { logo.style.animation = ''; });
+    </script>
+    <style>
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+</body>
+</html>

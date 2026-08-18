@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon E-Commerce Sales Dashboard | Sujal Chavan</title>
+
+    <meta name="description" content="Interactive Power BI dashboard analyzing 2.8M+ Amazon e-commerce sales records, built by Sujal Chavan.">
+    <meta name="keywords" content="Power BI, Amazon Sales, Dashboard, Data Cleaning, KPI Analysis">
+    <meta name="author" content="Sujal Chavan">
+
+    <link rel="canonical" href="https://sujalchavan2003.github.io/projects/project-1.html">
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='../index.html'" style="cursor: pointer;">SC</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../all-projects.html">Projects</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="https://github.com/Sujalchavan2003" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+        </div>
+    </nav>
+
+    <div class="page-container active">
+        <div class="page-header">
+            <div class="container">
+                <a href="../all-projects.html" class="back-button">← Back to Projects</a>
+                <h1 class="page-title">Amazon E-Commerce Sales Dashboard</h1>
+                <div class="page-meta">
+                    <div class="meta-item">
+                        <span>👤</span>
+                        <span>Team Size: Solo</span>
+                    </div>
+                    <div class="meta-item">
+                        <span>🏷️</span>
+                        <span>BI &amp; Data Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Project Overview</h2>
+            <p>
+                This project involved building an interactive <strong>Power BI dashboard</strong> analyzing over
+                <strong>2.8 million</strong> Amazon e-commerce sales records. The raw dataset contained significant
+                inconsistencies and unnecessary fields, which required extensive data cleaning and transformation
+                before it was reliable enough to analyze.
+            </p>
+            <p>
+                A large part of the work was simply figuring out what mattered: working through ambiguous,
+                unstructured data to identify which fields were relevant, and independently determining a cleaning
+                and analysis approach where the right path wasn't predefined.
+            </p>
+
+            <h2>What the Dashboard Surfaces</h2>
+            <ul>
+                <li>Revenue trends across time, category, and region</li>
+                <li>Key performance indicators (KPIs) for sales performance</li>
+                <li>Customer behavior patterns to support business insights and decision-making</li>
+            </ul>
+
+            <h3>Key Tools &amp; Techniques</h3>
+            <div class="tech-stack">
+                <div class="tech-category">
+                    <h4>BI &amp; Reporting</h4>
+                    <div class="tech-list">
+                        <span class="tech-item">Power BI</span>
+                        <span class="tech-item">Dashboard Development</span>
+                        <span class="tech-item">Report Writing</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Data Preparation</h4>
+                    <div class="tech-list">
+                        <span class="tech-item">Data Cleaning</span>
+                        <span class="tech-item">Data Validation</span>
+                        <span class="tech-item">Data Transformation</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Analysis</h4>
+                    <div class="tech-list">
+                        <span class="tech-item">KPI Analysis</span>
+                        <span class="tech-item">Trend Analysis</span>
+                        <span class="tech-item">Excel (Pivot Tables, Power Query)</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Challenges</h2>
+            <p>
+                <strong>Scale and inconsistency:</strong> at 2.8M+ rows, even small structural inconsistencies
+                compound quickly. Getting to a reliable, analysis-ready dataset meant systematic validation before
+                any dashboard work could begin.
+            </p>
+            <p>
+                <strong>Ambiguity:</strong> the dataset didn't come with a predefined "right" way to clean or
+                segment it, so a large part of the project was independently deciding which fields and cuts of the
+                data would actually answer useful business questions.
+            </p>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--secondary-bg); border-radius: 15px; border: 1px solid var(--border-color);">
+                <h3 style="margin-top: 0;">Project Links</h3>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                    <a href="https://github.com/Sujalchavan2003" class="demo-button" style="margin: 0;" target="_blank">GitHub Profile</a>
+                    <a href="mailto:sujalchavan2003@gmail.com" class="demo-button" style="margin: 0; background: var(--secondary-bg); color: var(--accent-color); border: 1px solid var(--accent-color);">Contact Author</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 4rem;">
+        <div class="container">
+            <p>&copy; <span id="copyright-year"></span> Sujal Chavan. Built with passion for data &amp; insight.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        const navEl = document.querySelector('nav');
+        const onNavScroll = () => {
+            if (window.scrollY > 20) navEl.classList.add('scrolled');
+            else navEl.classList.remove('scrolled');
+        };
+        window.addEventListener('scroll', onNavScroll, { passive: true });
+        onNavScroll();
+
+        window.addEventListener('load', function() {
+            const yearElement = document.getElementById('copyright-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>

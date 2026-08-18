@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Mask Detection (CNN) | Sujal Chavan</title>
+
+    <meta name="description" content="A CNN-based face mask detection model built with TensorFlow and Keras, by Sujal Chavan.">
+    <meta name="keywords" content="CNN, Face Mask Detection, TensorFlow, Keras, Computer Vision">
+    <meta name="author" content="Sujal Chavan">
+
+    <link rel="canonical" href="https://sujalchavan2003.github.io/projects/project-2.html">
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='../index.html'" style="cursor: pointer;">SC</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../all-projects.html">Projects</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="https://github.com/Sujalchavan2003" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+        </div>
+    </nav>
+
+    <div class="page-container active">
+        <div class="page-header">
+            <div class="container">
+                <a href="../all-projects.html" class="back-button">← Back to Projects</a>
+                <h1 class="page-title">Face Mask Detection (CNN)</h1>
+                <div class="page-meta">
+                    <div class="meta-item">
+                        <span>👤</span>
+                        <span>Team Size: Solo</span>
+                    </div>
+                    <div class="meta-item">
+                        <span>🏷️</span>
+                        <span>Computer Vision</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Project Overview</h2>
+            <p>
+                A convolutional neural network trained to classify whether a person in an image is wearing a
+                face mask. The project covers the full pipeline from image preprocessing and feature scaling
+                through model training and evaluation using standard classification metrics.
+            </p>
+
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="https://huggingface.co/spaces/schuggingface/FaceMaskDetection" target="_blank" class="demo-button">Try the Live Demo →</a>
+            </div>
+
+            <h2>Approach</h2>
+            <p>
+                The model takes an input image, applies preprocessing and scaling, and passes it through a CNN
+                to output a mask / no-mask classification. Performance was evaluated using standard classification
+                metrics to validate reliability before deployment.
+            </p>
+
+            <h3>Key Tools &amp; Techniques</h3>
+            <div class="tech-stack">
+                <div class="tech-category">
+                    <h4>Modeling</h4>
+                    <div class="tech-list">
+                        <span class="tech-item">TensorFlow</span>
+                        <span class="tech-item">Keras</span>
+                        <span class="tech-item">CNN</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Data Handling</h4>
+                    <div class="tech-list">
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">Image Preprocessing</span>
+                        <span class="tech-item">Feature Scaling</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Deployment</h4>
+                    <div class="tech-list">
+                        <span class="tech-item">Hugging Face Spaces</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--secondary-bg); border-radius: 15px; border: 1px solid var(--border-color);">
+                <h3 style="margin-top: 0;">Project Links</h3>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                    <a href="https://huggingface.co/spaces/schuggingface/FaceMaskDetection" class="demo-button" style="margin: 0;" target="_blank">Live Demo</a>
+                    <a href="https://github.com/Sujalchavan2003" class="demo-button" style="margin: 0; background: var(--secondary-bg); color: var(--accent-color); border: 1px solid var(--accent-color);" target="_blank">GitHub Profile</a>
+                    <a href="mailto:sujalchavan2003@gmail.com" class="demo-button" style="margin: 0; background: var(--secondary-bg); color: var(--accent-color); border: 1px solid var(--accent-color);">Contact Author</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 4rem;">
+        <div class="container">
+            <p>&copy; <span id="copyright-year"></span> Sujal Chavan. Built with passion for data &amp; insight.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        const navEl = document.querySelector('nav');
+        const onNavScroll = () => {
+            if (window.scrollY > 20) navEl.classList.add('scrolled');
+            else navEl.classList.remove('scrolled');
+        };
+        window.addEventListener('scroll', onNavScroll, { passive: true });
+        onNavScroll();
+
+        window.addEventListener('load', function() {
+            const yearElement = document.getElementById('copyright-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>

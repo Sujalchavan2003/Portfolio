@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Sujal Chavan | Data Analytics & ML Portfolio</title>
+
+    <meta name="description" content="Explore Sujal Chavan's data analytics and machine learning projects including Power BI dashboards, EDA notebooks, and computer vision models.">
+    <meta name="keywords" content="Data Analytics Projects, Power BI Dashboard, EDA, Machine Learning, CNN, Face Mask Detection">
+    <meta name="author" content="Sujal Chavan">
+
+    <meta property="og:title" content="Projects - Sujal Chavan | Data Scientist Portfolio">
+    <meta property="og:description" content="Power BI dashboards, exploratory data analysis, and machine learning projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sujalchavan2003.github.io/all-projects.html">
+    <meta property="og:site_name" content="Sujal Chavan Portfolio">
+
+    <link rel="canonical" href="https://sujalchavan2003.github.io/all-projects.html">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">SC</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="all-projects.html" style="color: var(--accent-color);">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://github.com/Sujalchavan2003" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Projects Page Header -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content" style="text-align: center;">
+                <h1 style="font-size: clamp(2.5rem, 6vw, 4rem);">What I've Built</h1>
+                <p class="hero-subtitle">Dashboards, analysis, and models built on real, messy data.</p>
+                <p class="hero-description">
+                    A collection of my work across BI reporting and machine learning - from cleaning multi-million-row datasets to training computer vision models.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="projects-grid fade-in">
+
+                <!-- Project 1: Amazon E-Commerce Sales Dashboard -->
+                <div class="project-card">
+                    <h3 class="project-title">Amazon E-Commerce Sales Dashboard</h3>
+                    <p class="project-description">
+                        Interactive Power BI dashboard analyzing 2.8M+ sales records. Involved extensive cleaning
+                        and transformation of an inconsistent, unstructured raw dataset to surface revenue trends,
+                        KPIs, and customer behavior patterns for business decision-making.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Data Cleaning</span>
+                        <span class="tech-tag">KPI Analysis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/project-1.html" class="project-link">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Face Mask Detection using CNN -->
+                <div class="project-card">
+                    <h3 class="project-title">Face Mask Detection (CNN)</h3>
+                    <p class="project-description">
+                        A convolutional neural network trained to classify whether a person is wearing a face mask
+                        from image input, applying image preprocessing and feature scaling with performance
+                        evaluated using standard classification metrics.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Keras</span>
+                        <span class="tech-tag">CNN</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/project-2.html" class="project-link">View Project</a>
+                        <a href="https://huggingface.co/spaces/schuggingface/FaceMaskDetection" class="project-link" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Placeholder: to be filled in manually later -->
+                <div class="project-card">
+                    <h3 class="project-title">More Coming Soon</h3>
+                    <p class="project-description">
+                        Another project is on its way. Check back soon, or reach out if you'd like a preview.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">In Progress</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="about.html" class="project-link">Get in Touch</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Let's Collaborate</h2>
+            <div class="contact-content fade-in">
+                <p class="contact-text">
+                    Interested in any of these projects or want to build something new together? I'm always excited to work on new data problems.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:sujalchavan2003@gmail.com" class="contact-link">
+                        <span>✉️</span> Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/sujal-chavan-a4890936b" target="_blank" class="contact-link">
+                        <span>💼</span> LinkedIn
+                    </a>
+                    <a href="https://github.com/Sujalchavan2003" target="_blank" class="contact-link">
+                        <span>🐙</span> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="copyright-year"></span> Sujal Chavan. Built with passion for data &amp; insight.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = navLinks.classList.toggle('active');
+            mobileMenu.setAttribute('aria-expanded', isOpen);
+            mobileMenu.textContent = isOpen ? '✕' : '☰';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenu.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenu.textContent = '☰';
+            }
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -10px 0px' });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        const navEl = document.querySelector('nav');
+        const onScroll = () => {
+            if (window.scrollY > 20) navEl.classList.add('scrolled');
+            else navEl.classList.remove('scrolled');
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('mouseenter', () => { logo.style.animation = 'glitch 0.3s ease-in-out'; });
+        logo.addEventListener('animationend', () => { logo.style.animation = ''; });
+
+        // Pointer-tracked glow on project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('pointermove', (e) => {
+                const r = card.getBoundingClientRect();
+                card.style.setProperty('--glow-x', ((e.clientX - r.left) / r.width) * 100 + '%');
+                card.style.setProperty('--glow-y', ((e.clientY - r.top) / r.height) * 100 + '%');
+            });
+        });
+
+        window.addEventListener('load', () => {
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
